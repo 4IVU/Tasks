@@ -1,9 +1,9 @@
 package AiSD.task_1;
 
 public class Triangle {
-    private Point x1y1;
-    private Point x2y2;
-    private Point x3y3;
+    private final Point x1y1;
+    private final Point x2y2;
+    private final Point x3y3;
 
     public Triangle(Point x1y1, Point x3y3, Point x2y2) {
         this.x1y1 = x1y1;
@@ -14,24 +14,24 @@ public class Triangle {
     }
 
     public double getPerimeter() {
-        double x1 = x1y1.getX();
-        double y1 = x1y1.getY();
-        double x2 = x2y2.getX();
-        double y2 = x2y2.getY();
-        double x3 = x3y3.getX();
-        double y3 = x3y3.getY();
+        double x1 = this.x1y1.getX();
+        double y1 = this.x1y1.getY();
+        double x2 = this.x2y2.getX();
+        double y2 = this.x2y2.getY();
+        double x3 = this.x3y3.getX();
+        double y3 = this.x3y3.getY();
         return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)) +
                 Math.sqrt(Math.pow(x3 - x2, 2) + Math.pow(y3 - y2, 2)) +
                 Math.sqrt(Math.pow(x1 - x3, 2) + Math.pow(y1 - y3, 2));
     }
 
     public double getArea() {
-        double x1 = x1y1.getX();
-        double y1 = x1y1.getY();
-        double x2 = x2y2.getX();
-        double y2 = x2y2.getY();
-        double x3 = x3y3.getX();
-        double y3 = x3y3.getY();
+        double x1 = this.x1y1.getX();
+        double y1 = this.x1y1.getY();
+        double x2 = this.x2y2.getX();
+        double y2 = this.x2y2.getY();
+        double x3 = this.x3y3.getX();
+        double y3 = this.x3y3.getY();
         double a = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
         double b = Math.sqrt(Math.pow(x3 - x2, 2) + Math.pow(y3 - y2, 2));
         double c = Math.sqrt(Math.pow(x1 - x3, 2) + Math.pow(y1 - y3, 2));
@@ -55,17 +55,11 @@ public class Triangle {
 
     }
 
-    public Point getX1y1() {
-        return x1y1;
-    }
+    public Point getX1y1() {return x1y1;}
 
-    public Point getX2y2() {
-        return x2y2;
-    }
+    public Point getX2y2() {return x2y2;}
 
-    public Point getX3y3() {
-        return x3y3;
-    }
+    public Point getX3y3() {return x3y3;}
 
 
     public static void main(String[] args) {
