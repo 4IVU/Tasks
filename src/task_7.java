@@ -17,7 +17,6 @@ public class task_7 {
 
 
     }
-
     public static int inarray(int n) {
         int[] nums = new int[n];
         Scanner scanner = new Scanner(System.in);
@@ -27,9 +26,10 @@ public class task_7 {
             ;
 
         }
-        System.out.println(Arrays.toString(nums));
+        //System.out.println(Arrays.toString(nums));
         int dlin = 2;
         int max_dlin = 1;
+
         int flag = fl(1, nums);
         for (int i = 1; i < n-1; i++) {
             if (flag == fl(i+1, nums)) {
